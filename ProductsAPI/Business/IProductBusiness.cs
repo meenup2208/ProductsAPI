@@ -1,8 +1,13 @@
 ﻿
+using ProductsAPI.Models;
+
 namespace ProductsAPI.Business
 {
     public interface IProductBusiness
     {
-        public List<Product> GetProducts();
+        void AddProduct(ProductDetails productDetails);
+        void DeleteProduct(string Id);
+        void GetProduct(string Id);
+        List<ProductDetails> GetAllProducts();
     }
 }
