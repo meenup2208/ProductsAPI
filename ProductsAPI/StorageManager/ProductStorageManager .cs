@@ -4,16 +4,27 @@ namespace ProductsAPI.StorageManager
 {
     public class ProductStorageManager : IProductStorageManager
     {
-        
-       public void AddProduct(ProductDetails product)
+        //DataHelper _dataHelper = new DataHelper();
+        public  bool AddProduct(ProductDetails product)
         {
-            DataHelper.Add(product);            
+            return DataHelper.Add(product);            
         }
-        
-        public void Delete(string Id)
+
+        public bool DeleteProduct(int Id)
         {
-            //pro
+            return DataHelper.Delete(Id);
+             
         }
-       
+
+        public List<ProductListItem> GetAllProducts()
+        {
+            return DataHelper.GetAll();
+             
+        }
+
+        public ProductDetails GetProduct(int Id)
+        {
+            return DataHelper.Get(Id);
+        }
     }
 }

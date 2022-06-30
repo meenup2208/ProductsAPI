@@ -4,10 +4,10 @@ namespace ProductsAPI.StorageManager
 {
     public interface IProductStorageManager
     {
-        void Add(ProductDetails product);
-        void Delete(string Id);
-        void GetSingle (string Id);    
-        List<ProductDetails> GetAll ();
+        bool AddProduct(ProductDetails product);
+        bool DeleteProduct(int Id);
+        ProductDetails GetProduct (int Id);    
+        List<ProductListItem> GetAllProducts ();
 
 
     }
